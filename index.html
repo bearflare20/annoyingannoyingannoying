@@ -5,19 +5,27 @@
       const sounds = [
         "mp3/sound1.mp3",
         "mp3/sound2.mp3",
-        "mp3/sound3.mp3"
+        "mp3/sound3.mp3",
+        "mp3/sound4.mp3",
+        "mp3/sound5.mp3",
+        "mp3/sound6.mp3",
+        "mp3/sound7.mp3"
       ];
 
-      // pick a random sound
-      const pick = sounds[Math.floor(Math.random() * sounds.length)];
+      function playRandom() {
+        const pick = sounds[Math.floor(Math.random() * sounds.length)];
+        const audio = document.createElement("audio");
+        audio.src = pick;
+        audio.autoplay = true;
+        document.body.appendChild(audio);
 
-      // create audio element
-      const audio = document.createElement("audio");
-      audio.src = pick;
-      audio.autoplay = true;
-      audio.loop = true;
+        // when current sound ends, play another one
+        audio.addEventListener("ended", () => {
+          playRandom();
+        });
+      }
 
-      document.body.appendChild(audio);
+      playRandom();
     </script>
   </body>
 </html>

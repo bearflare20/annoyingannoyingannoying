@@ -11,3 +11,5 @@ add the new mp3 into the line of mp3 in da code
 it play random mp3 each time!!!
 ## wow i like!!!
 pls stars 🙏🙏
+## who make this
+haha well i cant code for anything soooooo [heres their website dont kill me 🔥🤑🤑🤑](https://chatgpt.com)

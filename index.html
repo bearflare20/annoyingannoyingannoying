@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      // list all your mp3 files in the folder
+      const sounds = [
+        "mp3/sound1.mp3",
+        "mp3/sound2.mp3",
+        "mp3/sound3.mp3"
+      ];
+
+      // pick a random sound
+      const pick = sounds[Math.floor(Math.random() * sounds.length)];
+
+      // create audio element
+      const audio = document.createElement("audio");
+      audio.src = pick;
+      audio.autoplay = true;
+      audio.loop = true;
+
+      document.body.appendChild(audio);
+    </script>
+  </body>
+</html>

@@ -3,6 +3,8 @@
     <h1>Welcome to the Annoying Sound Machine 🔥😭</h1>
     <p>This site will keep playing random annoying sounds endlessly 🥀</p>
 
+    <button id="startBtn">Click to start the chaos 🔊</button>
+
     <script>
       // list all your mp3 files in the mp3 folder
       const sounds = [
@@ -22,13 +24,16 @@
         audio.autoplay = true;
         document.body.appendChild(audio);
 
-        // when current sound ends, play another one
         audio.addEventListener("ended", () => {
           playRandom();
         });
       }
 
-      playRandom();
+      // browsers block autoplay w/o user action
+      document.getElementById("startBtn").addEventListener("click", () => {
+        playRandom();
+        document.getElementById("startBtn").remove(); // remove button after start
+      });
     </script>
   </body>
 </html>

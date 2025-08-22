@@ -1,12 +1,20 @@
 <html>
+  <head>
+    <style>
+      #startBtn {
+        width: 100vw;
+        height: 100vh;
+        font-size: 2rem;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+      }
+    </style>
+  </head>
   <body>
-    <h1>Welcome to the Annoying Sound Machine 🔥😭</h1>
-    <p>This site will keep playing random annoying sounds endlessly 🥀</p>
-
-    <button id="startBtn">Click to start the chaos 🔊</button>
+    <button id="startBtn"></button>
 
     <script>
-      // list all your mp3 files in the mp3 folder
       const sounds = [
         "mp3/sound1.mp3",
         "mp3/sound2.mp3",
@@ -29,10 +37,9 @@
         });
       }
 
-      // browsers block autoplay w/o user action
       document.getElementById("startBtn").addEventListener("click", () => {
         playRandom();
-        document.getElementById("startBtn").remove(); // remove button after start
+        document.getElementById("startBtn").remove();
       });
     </script>
   </body>
